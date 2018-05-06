@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { MeatPage } from './app.po';
 
-describe('daycare-angular App', () => {
-  let page: AppPage;
+describe('meat App', function() {
+  let page: MeatPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MeatPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('mt works!');
   });
 });

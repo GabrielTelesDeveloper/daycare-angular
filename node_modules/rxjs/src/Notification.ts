@@ -107,7 +107,7 @@ export class Notification<T> {
     if (typeof value !== 'undefined') {
       return new Notification('N', value);
     }
-    return Notification.undefinedValueNotification;
+    return this.undefinedValueNotification;
   }
 
   /**
@@ -126,6 +126,6 @@ export class Notification<T> {
    * @return {Notification<any>} The valueless "complete" Notification.
    */
   static createComplete(): Notification<any> {
-    return Notification.completeNotification;
+    return this.completeNotification;
   }
 }
