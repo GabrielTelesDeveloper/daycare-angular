@@ -1,7 +1,7 @@
 {
   "creches": [
     {
-      "id": "baby-kids",
+      "id": "1",
       "nome": "Baby Kids",
       "avaliacao": 4.9,
       "dirImagem": "assets/img/creches/babykids.jpg",
@@ -12,7 +12,7 @@
       "telefone":"(61) 3256-5569"
     },
     {
-      "id": "babies-creche",
+      "id": "2",
       "nome": "Babies",
       "avaliacao": 3.1,
       "dirImagem": "assets/img/creches/babies.jpg",
@@ -23,7 +23,7 @@
       "telefone":"(61) 3325-4420"
     },
     {
-      "id": "educriart-creche",
+      "id": "3",
       "nome": "Educriart",
       "avaliacao": 3.2,
       "dirImagem": "assets/img/creches/educriart.jpg",
@@ -34,7 +34,7 @@
       "telefone":"(61) 3569-5555"
     },
     {
-      "id": "ms-creche",
+      "id": "4",
       "nome": "MS Creche",
       "avaliacao": 1.5,
       "dirImagem": "assets/img/creches/mscreche.jpg",
@@ -47,20 +47,28 @@
   ],
   "servico": [
     {
-      "id": "cup-cake",
-      "imagePath": "assets/img/foods/cupcake.png",
-      "name": "Cup Cake",
-      "description": "Cup Cake recheado de Doce de Leite",
-      "price": 8.7,
-      "restaurantId": "bread-bakery"
+      "id": "1",
+      "nome": "capoeira",
+      "imagePath": "assets/img/servicos/capoeira.png",
+      "crecheId": "1"
     },
     {
-      "id": "cake",
-      "imagePath": "assets/img/foods/cake.png",
-      "name": "Fatia de Bolo",
-      "description": "Fatia de bolo de morango",
-      "price": 5.9,
-      "restaurantId": "tasty-treats"
+      "id": "2",
+      "nome": "futebol",
+      "imagePath": "assets/img/servicos/futebol.png",
+      "crecheId": "1"
+    },
+    {
+      "id": "3",
+      "nome": "Educação Musical",
+      "imagePath": "assets/img/servicos/music.png",
+      "crecheId": "1"
+    },
+    {
+      "id": "4",
+      "nome": "Natação",
+      "imagePath": "assets/img/servicos/natacao.png",
+      "crecheId": "1"
     }
   ],
   "avaliacoes": [
@@ -69,35 +77,35 @@
       "data": "2017-01-23T18:25:43",
       "review": 4.5,
       "comentario": "Tudo muito bom, cuidam dos meus filhos.",
-      "crecheId": "baby-kids"
+      "crecheId": "1"
     },
     {
       "nome": "Gabriel Teles",
       "data": "2016-12-12T18:25:43",
       "review": 3,
       "comentario": "Não recomendo. Meu filho se machucou.",
-      "crecheId": "babies-creche"
+      "crecheId": "1"
     },
     {
       "nome": "Márcio Henrique",
       "data": "2016-12-12T18:25:43",
       "review": 2.5,
       "comentario": "Deixou a desejar no atendimento.",
-      "crecheId": "educriart-creche"
+      "crecheId": "1"
     },
     {
       "nome": "Gustavo Souza",
       "data": "2016-12-12T18:25:43",
       "review": 4.9,
       "comentario": "Nunca deixou na mão, sempre cuidando dos meus filhos.",
-      "crecheId": "ms-creche"
+      "crecheId": "1"
     },
     {
       "nome": "Fernando Marinho",
       "data": "2017-01-23T18:25:43",
       "review": 4.6,
       "comentario": "Gostei do atendimento!",
-      "crecheId": "ms-creche"
+      "crecheId": "1"
     }
   ],
   "orders": []
