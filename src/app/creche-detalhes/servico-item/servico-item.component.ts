@@ -9,6 +9,8 @@ import {ServicoItem} from './servico-item.model'
 })
 export class ServicoItemComponent implements OnInit {
 
+
+  //Esse decorator imput quer dizer que os dados virão do componente parent
   @Input() servicoItem: ServicoItem
 
   constructor() { }

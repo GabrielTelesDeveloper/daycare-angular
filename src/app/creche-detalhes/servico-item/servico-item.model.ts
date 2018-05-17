@@ -4,5 +4,4 @@ export interface ServicoItem{
     nome:string
     descricao:string
     imagePath:string
-    
 }

@@ -13,7 +13,7 @@
         <!-- /.box-header -->
         <div class="box-body">
             <p align="justify">
-                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
+                
             </p>
         </div>
         <!-- /.box-body -->
@@ -32,20 +32,10 @@
         <!-- /.box-header -->
         <div class="box-body">
 
+            <!-- Aqui é realizada a chamada do selector que contém as informações do serviço -->
             <div class="col-md-12">
-
-                <div class="col-md-6">
-                    <img src="assets/img/servicos/natacao.png"> Natação
-                </div>
-                <div class="col-md-6">
-                    <img src="assets/img/servicos/capoeira.png"> Capoeira
-                </div>
-                <div class="col-md-6">
-                    <img src="assets/img/servicos/futebol.png"> Futebol
-                </div>
-                <div class="col-md-6">
-                    <img src="assets/img/servicos/music.png"> Educação Musical
-                </div>
+                <!-- async = se inscreve no servico, que é um observable, pegando os itens, passando para o NgFor interando os dados -->
+               <mt-servico-item *ngFor="let tipo of servico | async" [servicoItem]="tipo"></mt-servico-item>
             </div>
         </div>
 
