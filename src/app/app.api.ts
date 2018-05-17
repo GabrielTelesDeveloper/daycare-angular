@@ -1,2 +1,2 @@
 //Constante para carregar o arquivo json
-export const DAYCARE = 'http://localhost:3000'
+export const DAYCARE = 'https://appdbteste2.herokuapp.com'
