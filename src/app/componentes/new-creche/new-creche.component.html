@@ -95,8 +95,51 @@
             </div>
         </div>
 
-        <!-- Parte do márcio henrique -->
-        <!-- Fim da parte do márcio henrique -->
+        <!-- Márcio - Início -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="box box-primary form">
+                        <div class="box-header with-border">
+                            <h2 class="box-title">
+                                <i class="fa fa-check"></i> ServiÁos
+                            </h2>
+                        </div>
+                        <form>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="foto">Õcone</label>
+                                    <input disabled type="file" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="hora">DescriÁ„o</label>
+                                    <input [(ngModel)]="Cdescricao" name="hora" type="text" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </form>
+                        <div align="center">
+                            <button class="btn green" (click)="addServico()">
+                                <b>Adicionar</b>
+                            </button>
+                        </div>
+                        <hr>
+
+                        <div *ngFor="let serv of this.servicos">
+                            <img [src]="serv.icone"> {{serv.descricao}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- dentro do arquivo newcreche.component.ts adicionar essa parte de cÛdigo -->
+
+  addServico() {
+    this.servico = { icone: this.Cicone, descricao: this.Cdescricao }
+    this.servicos.push(this.servico);
+  }
+        <!-- Márcio - FIM -->
         
     </section>
 </div>
