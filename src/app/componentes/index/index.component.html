@@ -1,0 +1,48 @@
+<!-- INÍCIO DO CONTEÚDO -->
+<section class="content-header">
+</section>
+
+<section class="content">
+
+  <div class="jumbotron welcome-jumbotron">
+    <h1>Bem vindo ao
+      <strong>Daycare</strong>!</h1>
+    <p>
+      Encontre o melhor lugar para o seu filho.
+    </p>
+    <a class="btn btn-primary btn-lg" [routerLink]="['/creche']">Ver creches</a>
+  </div>
+
+</section>
+
+<section class="content-header">
+  <h1>
+    Todos as creches
+    <a (click)="barraDeBusca()" class="search-link pull-right">
+      <span *ngIf="iptSearch.value">
+        <small>"{{iptSearch.value}}"</small>
+      </span>
+      <i class="fa fa-search"></i>
+    </a>
+  </h1>
+
+  <!-- Barra de busca -->
+  <div class="row">
+    <div class="col-xs-12 barra-busca" [@busca]="estadoBusca">
+      <form [formGroup]="searchForm">
+        <div class="form-group">
+          <input type="text" #iptSearch formControlName="searchControl" class="form-control" placeholder="O que você está procurando">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12" *ngFor="let cre of creches">
+      <app-card-creche [creche]="cre"></app-card-creche>
+    </div>
+  </div>
+</section>

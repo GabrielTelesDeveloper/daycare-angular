@@ -1,0 +1,13 @@
+<a [routerLink]="['/creche',creche.id]">
+	<div class="place-info-box">
+		<span class="place-info-box-icon">
+			<img [src]="creche.dirImagem" />
+		</span>
+		<div class="place-info-box-content">
+			<span class="place-info-box-text">{{creche.nome}}</span>
+			<span class="place-info-box-star">
+				<i class="fa fa-star"></i> {{creche.avaliacao}}</span>
+			<span class="place-info-box-detail">{{creche.horario}}</span>
+		</div>
+	</div>
+</a>

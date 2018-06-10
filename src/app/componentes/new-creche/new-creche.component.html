@@ -1,0 +1,102 @@
+<div class="row">
+
+    <section class="content-header">
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="box box-primary form">
+                        <div class="box-header with-border">
+                            <h2 class="box-title">
+                                <i class="fa fa-institution"></i> Dados Institucionais
+                            </h2>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form>
+
+                                <div class="form-group">
+                                    <label for="nome">Nome da instituição</label>
+                                    <small>
+                                        <input [(ngModel)]="Cnome" required="" class="form-control" type="text" name="nome" id="nome">
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="foto">Foto</label>
+                                    <input disabled type="file" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Sobre</label>
+                                    <small>
+                                        <input [(ngModel)]="Csobre" required="" class="form-control" type="text" name="email" id="email">
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Horário</label>
+                                    <small>
+                                        <input [(ngModel)]="Chorario" required="" class="form-control" type="text" name="email" id="email">
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Faixa etária</label>
+                                    <small>
+                                        <input [(ngModel)]="CfaixaEtaria" required="" class="form-control" type="text" name="email" id="email">
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Telefone</label>
+                                    <small>
+                                        <input [(ngModel)]="Ctelefone" required="" class="form-control" type="text" name="email" id="email">
+                                    </small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box box-primary form">
+                        <div class="box-header with-border">
+                            <h2 class="box-title">
+                                <i class="fa fa-location-arrow"></i> Localização
+                            </h2>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <daycare-mapa></daycare-mapa>
+                        </div>
+                        <div align="center">
+                            <button (click)="addCreche()" class="btn blue">
+                                <b>Finalizar</b>
+                            </button>
+                            <button routerLink="/" class="btn red">
+                                <b>Cancelar</b>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Parte do márcio henrique -->
+        <!-- Fim da parte do márcio henrique -->
+        
+    </section>
+</div>
