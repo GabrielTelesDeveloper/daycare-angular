@@ -1,0 +1,43 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 align="center" class="modal-title" id="exampleModalLabel">Ficou alguma dúvida? Por favor, entre em contato com a gente! :)</h4>
+        </div>
+        <div class="modal-body primary">
+
+
+            <form>
+                <div class="form-group">
+                    <label for="nome">Seu Nome</label>
+                    <small>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Seu melhor e-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="nome@algumacoisa.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Sua Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem aqui"></textarea>
+                </div>
+
+                <div align="center">
+                    <button class="btn btn-primary" (click)="showSuccess()"><strong>Enviar</strong></button>
+                </div>
+
+                <!--div ng-show="mostrar" class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h4><i class="icon fa fa-check"></i><strong>Enviado</strong></h4>
+                        <p class="formatar">Seu e-mail foi enviado, em breve entraremos em contato!</p>
+                      </div-->
+
+            </form>
+
+        </div>
+    </div>
+</div>
