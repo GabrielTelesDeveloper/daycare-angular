@@ -1,14 +1,14 @@
-import { MeatPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('meat App', function() {
-  let page: MeatPage;
+describe('project App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new MeatPage();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('mt works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
