@@ -14,9 +14,15 @@
                     </span>
                 </div>
                 <div class="box-body">
-
-                    <!-- Colar aqui fernando -->
-
+                    <div class="col-md-3" *ngIf="creche">
+                        <img class="box-img-detail" [src]="creche?.dirImagem" />
+                        <div>
+                            <br>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
+                                <strong>Visualizar Fotos</strong>
+                            </button>
+                        </div>
+                    </div>
                     <br>
                     <dl class="col-md-9">
                         <div class="col-md-4">
@@ -95,11 +101,18 @@
         </div>
     </div>
 </section>
-
-
 <!-- Modal -->
-<!-- Aqui Fernando -->
-
+<div class="modal fade in" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <carousel>
+                <slide *ngFor="let slide of slides">
+                    <img [src]="slide.image" class="img-main-carousel" style="display: block; width: 100%;">
+                </slide>
+            </carousel>
+        </div>
+    </div>
+</div>
 <!-- Contato -->
 <div class="modal fade in" id="contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <mt-contato-creche></mt-contato-creche>

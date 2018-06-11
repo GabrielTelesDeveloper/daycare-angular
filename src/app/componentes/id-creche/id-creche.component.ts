@@ -13,9 +13,12 @@ export class IdCrecheComponent implements OnInit {
   creches: Creche[] = []
   creche: Creche
 
-  //Parte do Fernando Marinho
-
-
+  slides = [
+    { image: 'assets/img/fotos/img1.jpg' },
+    { image: 'assets/img/fotos/img4.jpg' },
+    { image: 'assets/img/fotos/img5.jpg' }
+  ];
+  
   constructor(private crecheService: CrecheService, private route: ActivatedRoute) {
     this.id = this.route.snapshot.params.id
     this.crecheService.getCreches()
