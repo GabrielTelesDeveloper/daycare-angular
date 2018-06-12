@@ -18,7 +18,11 @@ import { NewCrecheComponent } from './componentes/new-creche/new-creche.componen
 import { SobreComponent } from './componentes/sobre/sobre.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ContatoCrecheComponent } from './componentes/contato-creche/contato-creche.component';
-
+import { MessageListComponent } from './componentes/message-list/message-list.component';
+import { MessageFormComponent } from './componentes/message-form/message-form.component';
+import { MessageItemComponent } from './componentes/message-item/message-item.component';
+import { DialogflowService } from './services/dialogflow.service';
+import { HttpModule } from '@angular/http';
 
 const ROUTES: Routes = [
   { path: '', component: IndexComponent },
@@ -41,7 +45,10 @@ const ROUTES: Routes = [
     MapaComponent,
     NewCrecheComponent,
     SobreComponent,
-    ContatoCrecheComponent
+    ContatoCrecheComponent,
+    MessageListComponent,
+    MessageFormComponent,
+    MessageItemComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -54,9 +61,10 @@ const ROUTES: Routes = [
     }),
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpModule
   ],
-  providers: [CrecheService],
+  providers: [CrecheService,DialogflowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
