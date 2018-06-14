@@ -1,6 +1,7 @@
 import {Local} from "../models/Local"
 import {Servico} from "../models/Servico"
 import {Foto} from "../models/Foto"
+import { Avaliacao } from "./Avaliacoes";
 
 export interface Creche {
     id?: number
@@ -14,4 +15,5 @@ export interface Creche {
     servicos: Servico[]
     local: Local
     fotos?: Foto[]
+    review?: Avaliacao[]
 }

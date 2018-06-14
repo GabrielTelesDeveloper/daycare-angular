@@ -16,12 +16,14 @@
                 <div class="box-body">
                     <div class="col-md-3" *ngIf="creche">
                         <img class="box-img-detail" [src]="creche?.dirImagem" />
+
                         <div>
                             <br>
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
                                 <strong>Visualizar Fotos</strong>
                             </button>
                         </div>
+
                     </div>
                     <br>
                     <dl class="col-md-9">
@@ -93,14 +95,53 @@
                     <daycare-mapa [crecheLocal]="this.creche.local"></daycare-mapa>
                 </div>
             </div>
-            <div align="right">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contato">
-                    <strong>Fale Conosco</strong>
-                </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Principais Comentários</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="col-md-12">
+                        <div class="col-md-6" *ngFor="let rev of reviews">
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <span class="review-score pull-right">
+                                        <i class="fa fa-star"></i>{{rev.star}}</span>
+                                    <div class="user-block">
+                                        <img alt="User Image" class="img-circle" [src]="rev.img">
+                                        <span class="username">{{rev.nome}}</span>
+                                        <span class="description">{{rev.data}}</span>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <p>{{rev.comentario}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div align="right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contato">
+            <strong>Fale Conosco</strong>
+        </button>
+    </div>
+
 </section>
+
+
 <!-- Modal -->
 <div class="modal fade in" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -113,6 +154,7 @@
         </div>
     </div>
 </div>
+
 <!-- Contato -->
 <div class="modal fade in" id="contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <mt-contato-creche></mt-contato-creche>

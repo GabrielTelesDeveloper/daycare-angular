@@ -78,9 +78,9 @@ export class NewCrecheComponent implements OnInit {
     this.route.navigate(['./creche', this.id])
   }
 
-  //Inclusão do Método de Serviços - Márcio
-    addServico() {
+  addServico() {
     this.servico = { icone: this.Cicone, descricao: this.Cdescricao }
     this.servicos.push(this.servico);
   }
+
 }

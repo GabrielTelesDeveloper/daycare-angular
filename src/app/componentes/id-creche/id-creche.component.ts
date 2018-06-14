@@ -18,7 +18,18 @@ export class IdCrecheComponent implements OnInit {
     { image: 'assets/img/fotos/img4.jpg' },
     { image: 'assets/img/fotos/img5.jpg' }
   ];
-  
+
+  reviews = [
+    {
+      star: 4.5,
+      nome: "Gabriel Teles",
+      img: "assets/img/reactions/loved.png",
+      data: "14/06/2018",
+      comentario: "Ótima estrutura e ambiente para nossos pequenos."
+    }
+  ]
+
+
   constructor(private crecheService: CrecheService, private route: ActivatedRoute) {
     this.id = this.route.snapshot.params.id
     this.crecheService.getCreches()
